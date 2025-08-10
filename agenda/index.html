@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Pastel Avanzada</title>
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>La lore agenda</h1>
+    </header>
+
+    <div id="calendar"></div>
+
+    <!-- Modal para añadir/editar eventos -->
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <h2 id="modalTitle">Nuevo evento</h2>
+            <label>Título:</label>
+            <input type="text" id="eventTitle">
+
+            <label>
+                <input type="checkbox" id="allDayCheckbox" checked>
+                Evento de todo el día
+            </label>
+
+            <div id="timeInputs">
+                <label>Hora inicio:</label>
+                <input type="time" id="startTime">
+                <label>Hora fin:</label>
+                <input type="time" id="endTime">
+            </div>
+
+            <input type="date" id="startDate">
+            <input type="date" id="endDate">
+
+            <div class="modal-buttons">
+                <button id="saveEvent">Guardar</button>
+                <button id="cancelEvent">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para acciones sobre un evento -->
+    <div id="actionModal" class="modal">
+        <div class="modal-content">
+            <h2>¿Qué quieres hacer con este evento?</h2>
+            <div class="modal-buttons">
+                <button id="editEvent">Editar</button>
+                <button id="deleteEvent">Eliminar</button>
+            </div>
+            <button id="closeActionModal" style="margin-top:10px; width:100%;">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
